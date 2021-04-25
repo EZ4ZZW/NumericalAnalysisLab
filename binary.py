@@ -14,10 +14,10 @@ def binary(x, y):
         mid = (l+r)/2
         if abs(f(mid)-0) < eps:
             return mid
-        if f(mid) < 0:
-            l = mid + h
+        if f(mid)*f(x) > 0:
+            l = mid
         else:
-            r = mid - h
+            r = mid
     return -1
 
 answer = binary(1.0, 2.0)
